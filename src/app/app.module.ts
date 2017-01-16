@@ -10,11 +10,17 @@ import { routing } from './app.routing';
  
 import { Property } from './shared/property';
 import { PropertiesService } from './shared/properties.service';
+import { RegisterComponent } from './users/register/register.component';
+import { LoginComponent } from './users/login/login.component';
+
+import { Angular2TokenService, A2tUiModule} from 'angular2-token';
  
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +28,7 @@ import { PropertiesService } from './shared/properties.service';
     HttpModule,
     routing
   ],
-  providers: [PropertiesService],
+  providers: [PropertiesService, Angular2TokenService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
