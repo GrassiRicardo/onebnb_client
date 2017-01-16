@@ -15,7 +15,8 @@ import { RegisterComponent } from './users/register/register.component';
 import { LoginComponent } from './users/login/login.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
- 
+import { UserEditComponent } from './users/user-edit/user-edit.component';
+import { ForgotPasswordComponent } from './users/forgot-password/forgot-password.component'; 
  
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { FooterComponent } from './layouts/footer/footer.component';
     RegisterComponent,
     LoginComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    UserEditComponent,
+    ForgotPasswordComponent
   ],
   imports: [
     BrowserModule,
