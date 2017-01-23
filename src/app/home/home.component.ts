@@ -14,7 +14,11 @@ export class HomeComponent implements OnInit {
   constructor(private PropertiesService: PropertiesService) { }
  
   ngOnInit() {
-    this.PropertiesService.getProperties()
+    this.search('Brazil')
+  }
+
+  search(query){
+    this.PropertiesService.searchProperties(query)
       .subscribe(data => this.properties = data);
   }
  
