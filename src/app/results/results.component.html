@@ -4,7 +4,9 @@
   	<app-filter></app-filter>
 	</div>
 	<div class="row">
-   	<!-- Properties -->
+		 <div *ngFor="let p of properties">
+			 <app-property-box name="{{p.property.name}}" price="{{p.property.price}}" photo="{{p.property.photo[0]}}"></app-property-box>
+		 </div>
 	</div>
 	<div class="row">
 		<app-pagination totalItems="{{ 20 }}"></app-pagination>
