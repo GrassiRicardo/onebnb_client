@@ -16,7 +16,8 @@ import { LoginComponent } from './users/login/login.component';
 import { HeaderComponent } from './layouts/header/header.component';
 import { FooterComponent } from './layouts/footer/footer.component';
 import { UserEditComponent } from './users/user-edit/user-edit.component';
-import { ForgotPasswordComponent } from './users/forgot-password/forgot-password.component'; 
+import { ForgotPasswordComponent } from './users/forgot-password/forgot-password.component';
+import { ResultsComponent } from './results/results.component'; 
  
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { ForgotPasswordComponent } from './users/forgot-password/forgot-password
     HeaderComponent,
     FooterComponent,
     UserEditComponent,
-    ForgotPasswordComponent
+    ForgotPasswordComponent,
+    ResultsComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,4 @@
+import { ResultsComponent } from './results/results.component';
 import { ForgotPasswordComponent } from './users/forgot-password/forgot-password.component';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule }   from '@angular/router';
@@ -13,7 +14,8 @@ const appRoutes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
-  { path: 'user/edit', component: UserEditComponent, canActivate: [Angular2TokenService] }
+  { path: 'user/edit', component: UserEditComponent, canActivate: [Angular2TokenService] },
+  { path: 'results', component: ResultsComponent }
 ];
  
 // Exporta a constante routing para importarmos ela no arquivo app.module.ts
