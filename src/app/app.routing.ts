@@ -1,3 +1,4 @@
+import { Page404Component } from './layouts/page-404/page-404.component';
 import { PropertyDetailsComponent } from './property/property-details/property-details.component';
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule }   from '@angular/router';
@@ -15,7 +16,8 @@ const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'user/edit', component: UserEditComponent, canActivate: [Angular2TokenService] },
   { path: 'results', component: ResultsComponent },
-  { path: 'property/:id', component: PropertyDetailsComponent }
+  { path: 'property/:id', component: PropertyDetailsComponent },
+  { path: 'page-404', component: Page404Component}
 ];
  
 // Exporta a constante routing para importarmos ela no arquivo app.module.ts

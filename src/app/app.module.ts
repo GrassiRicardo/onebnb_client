@@ -1,3 +1,4 @@
+import { Page404Component } from './layouts/page-404/page-404.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -52,7 +53,8 @@ import { SendMessageComponent } from './shared/send-message/send-message.compone
     LightboxComponent,
     CommentBoxComponent,
     UserDetailBoxComponent,
-    SendMessageComponent
+    SendMessageComponent,
+    Page404Component
   ],
   imports: [
     BrowserModule,
