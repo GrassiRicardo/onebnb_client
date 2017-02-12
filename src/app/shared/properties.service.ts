@@ -13,6 +13,12 @@ export class PropertiesService {
  
   constructor(private http: Http) { }
 
+  //com este metodo é possivel autocompletar os inputs
+  autocomplete(){
+    return this.http.get(environment.api_base_url + 'autocomplete.json')
+      .map(res => res.json());
+  }
+
   // Incluimos nosso método de search
   searchProperties(params){
     let parameters = new URLSearchParams();
@@ -45,5 +51,5 @@ export class PropertiesService {
   deleteProperty(id){
     return this.http.delete(environment.api_base_url + 'properties.json/' + id)
       .map(res => res.json());
-  }
+  }  
 }
