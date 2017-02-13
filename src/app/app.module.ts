@@ -5,7 +5,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { CarouselModule, DropdownModule, AlertModule, ButtonsModule, DatepickerModule, CollapseModule, ModalModule, PaginationModule} from "ng2-bootstrap/ng2-bootstrap";
+import { CarouselModule, DropdownModule, AlertModule, ButtonsModule, DatepickerModule, CollapseModule, ModalModule, PaginationModule,
+  TypeaheadModule} from "ng2-bootstrap/ng2-bootstrap";
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
  
@@ -33,7 +34,6 @@ import { LightboxComponent } from './shared/lightbox/lightbox.component';
 import { CommentBoxComponent } from './shared/comment-box/comment-box.component';
 import { UserDetailBoxComponent } from './shared/user-detail-box/user-detail-box.component';
 import { SendMessageComponent } from './shared/send-message/send-message.component';
-import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
 
 @NgModule({
   declarations: [
@@ -72,7 +72,7 @@ import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
     CarouselModule.forRoot(),
     ModalModule.forRoot(),
     AgmCoreModule.forRoot({apiKey: 'AIzaSyAF8eIfpFEw3CSU4ZY5KczTWSEjc7Bl3lc'}),
-    Ng2AutoCompleteModule
+    TypeaheadModule.forRoot()
   ],
   providers: [PropertiesService, Angular2TokenService, UsersService, ReservationService],
   bootstrap: [AppComponent]

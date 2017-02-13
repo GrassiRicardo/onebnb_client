@@ -12,7 +12,7 @@ export class SearchComponent implements OnInit {
  
   private event: KeyboardEvent;
   private query: string = "";
-  private arrayAutocomplete: string[] = [];
+  private arrayAutocomplete: any[] = [];
   private searchModel = "";
  
   constructor(private PropertiesService: PropertiesService,private router: Router, private route: ActivatedRoute) {}
@@ -26,7 +26,7 @@ export class SearchComponent implements OnInit {
   }
  
   private onEvent(event: KeyboardEvent): void {
-    if(event.key == "Enter" && this.query != "")
+    if(event.key == "Enter" && this.query != "" )
       this.search();
   }
  
