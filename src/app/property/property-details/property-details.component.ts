@@ -1,3 +1,4 @@
+import { Angular2TokenService } from 'angular2-token';
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { PropertiesService } from '../../shared/properties.service';
@@ -11,7 +12,7 @@ import { Property } from '../../shared/property';
 })
 export class PropertyDetailsComponent implements OnInit {
  
-  constructor(private PropertiesService: PropertiesService, private route: ActivatedRoute, private router: Router) { }
+  constructor(private PropertiesService: PropertiesService, private route: ActivatedRoute, private router: Router, private _tokenService: Angular2TokenService) { }
  
   private property: Property;
   private address: any = [];
@@ -37,9 +38,13 @@ export class PropertyDetailsComponent implements OnInit {
             this.facilities = data.property.facility;
             this.lat = +data.property.address.latitude;
             this.lng = +data.property.address.longitude;
+            
+            this.PropertiesService.addVisitProperty(params['id']).subscribe(err => "Não foi possivel salvar a visita");
           },
           err => {this.router.navigateByUrl('/page-404');}
         );
     });
   }
+
+  addVisitProperty
 }

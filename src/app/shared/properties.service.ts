@@ -29,6 +29,11 @@ export class PropertiesService {
     return this._tokenService.post('properties/' + id + '/wishlist', {})
       .map(res => res.json());
   }
+
+  addVisitProperty(id){
+    return this._tokenService.post('properties/' + id + '/visitproperty', {})
+      .map(res => res.json());
+  }
  
   removeToWishlist(id){
     return this._tokenService.delete('properties/' + id + '/wishlist')
@@ -46,7 +51,7 @@ export class PropertiesService {
   }
  
   getProperty(id){
-    return this.http.get(environment.api_base_url + 'properties/' + id)
+    return this.http.get(environment.api_base_url + 'properties/' + id + '.json')
       .map(res => res.json());
   }
  
