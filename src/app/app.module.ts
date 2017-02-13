@@ -1,3 +1,4 @@
+import { UsersService } from './shared/users.service';
 import { Page404Component } from './layouts/page-404/page-404.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -72,7 +73,7 @@ import { Ng2AutoCompleteModule } from 'ng2-auto-complete';
     AgmCoreModule.forRoot({apiKey: 'AIzaSyAF8eIfpFEw3CSU4ZY5KczTWSEjc7Bl3lc'}),
     Ng2AutoCompleteModule
   ],
-  providers: [PropertiesService, Angular2TokenService],
+  providers: [PropertiesService, Angular2TokenService, UsersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
