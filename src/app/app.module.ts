@@ -1,3 +1,4 @@
+import { TalksService } from './shared/talks.service';
 import { ReservationService } from './shared/reservation.service';
 import { UsersService } from './shared/users.service';
 import { Page404Component } from './layouts/page-404/page-404.component';
@@ -34,6 +35,7 @@ import { LightboxComponent } from './shared/lightbox/lightbox.component';
 import { CommentBoxComponent } from './shared/comment-box/comment-box.component';
 import { UserDetailBoxComponent } from './shared/user-detail-box/user-detail-box.component';
 import { SendMessageComponent } from './shared/send-message/send-message.component';
+import { MenuComponent } from './shared/menu/menu.component';
 
 @NgModule({
   declarations: [
@@ -57,7 +59,8 @@ import { SendMessageComponent } from './shared/send-message/send-message.compone
     CommentBoxComponent,
     UserDetailBoxComponent,
     SendMessageComponent,
-    Page404Component
+    Page404Component,
+    MenuComponent
   ],
   imports: [
     BrowserModule,
@@ -74,7 +77,7 @@ import { SendMessageComponent } from './shared/send-message/send-message.compone
     AgmCoreModule.forRoot({apiKey: 'AIzaSyAF8eIfpFEw3CSU4ZY5KczTWSEjc7Bl3lc'}),
     TypeaheadModule.forRoot()
   ],
-  providers: [PropertiesService, Angular2TokenService, UsersService, ReservationService],
+  providers: [PropertiesService, Angular2TokenService, UsersService, ReservationService, TalksService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
