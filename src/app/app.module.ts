@@ -36,6 +36,7 @@ import { CommentBoxComponent } from './shared/comment-box/comment-box.component'
 import { UserDetailBoxComponent } from './shared/user-detail-box/user-detail-box.component';
 import { SendMessageComponent } from './shared/send-message/send-message.component';
 import { MenuComponent } from './shared/menu/menu.component';
+import { TalksListComponent } from './talks/talks-list/talks-list.component';
 
 @NgModule({
   declarations: [
@@ -60,7 +61,8 @@ import { MenuComponent } from './shared/menu/menu.component';
     UserDetailBoxComponent,
     SendMessageComponent,
     Page404Component,
-    MenuComponent
+    MenuComponent,
+    TalksListComponent
   ],
   imports: [
     BrowserModule,
