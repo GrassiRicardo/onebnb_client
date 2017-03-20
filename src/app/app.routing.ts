@@ -1,3 +1,4 @@
+import { PropertyTripsComponent } from './property/property-trips/property-trips.component';
 import { TalksChatComponent } from './talks/talks-chat/talks-chat.component';
 import { TalksListComponent } from './talks/talks-list/talks-list.component';
 import { Page404Component } from './layouts/page-404/page-404.component';
@@ -21,7 +22,8 @@ const appRoutes: Routes = [
   { path: 'property/:id', component: PropertyDetailsComponent },
   { path: 'page-404', component: Page404Component},
   { path: 'talks', component: TalksListComponent},
-  { path: 'talks/chat/:id', component: TalksChatComponent }
+  { path: 'talks/chat/:id', component: TalksChatComponent },
+  { path: 'trips', component: PropertyTripsComponent }
 ];
  
 // Exporta a constante routing para importarmos ela no arquivo app.module.ts
