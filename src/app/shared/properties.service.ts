@@ -79,4 +79,13 @@ export class PropertiesService {
     return this.http.get(environment.api_base_url + 'featured.json')
       .map(res => res.json());
   }  
+
+  is_available(checkin_date, checkout_date, id){
+    let params = new URLSearchParams();
+    params.set('checkin_date', checkin_date);
+    params.set('checkout_date', checkout_date);
+  
+    return this.http.get(environment.api_base_url + 'properties/' + id + '/check_availability.json', {search: params})
+      .map(res => res.json());
+  }
 }
