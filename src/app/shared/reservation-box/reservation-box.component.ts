@@ -14,7 +14,8 @@ export class ReservationBoxComponent implements OnInit {
   public guests_array:Array<Object> = [];
   @Input() max: number;
   @Input() property_id: number;
-  @Input() price: any; 
+  @Input() price: any;
+ 
  
   constructor(private router: Router, private route: ActivatedRoute) {}
  
@@ -25,6 +26,7 @@ export class ReservationBoxComponent implements OnInit {
   }
  
   ngOnInit() {
+    console.log(this.formateDate(this.begindate));
   }
  
   intervalOfDays() {
